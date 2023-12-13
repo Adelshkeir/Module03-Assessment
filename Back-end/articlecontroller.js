@@ -1,4 +1,5 @@
 import Article from "./articlemodel.js";
+import User from "./usermodel.js";
 import fs from "fs";
 import path from "path";
 
@@ -7,10 +8,13 @@ class articlesController {
   static async createarticle(req, res) {
     try {
       const image = req.file.filename;
+      const user = await User.findByPk(req.params.userId);
       const newarticle = await Article.create({ ...req.body, image: image });
       if (!newarticle) {
         return res.status(400).json("article creation failed");
       }
+      await newarticle.setUser(user);
+      return res.status(201).json(newarticle);
     } catch (error) {
       console.log(error);
     }
