@@ -45,9 +45,9 @@ class usersController {
 
   static async createUser(req, res) {
     try {
-      const { username } = req.body;
+      const { username,userType } = req.body;
       const newUser = await User.create({
-        username,
+        username,userType
       });
 
       if (!newUser) {
