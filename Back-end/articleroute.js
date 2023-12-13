@@ -5,7 +5,7 @@ import express from "express"
 const articleRouter = express.Router();
 
 
-articleRouter.post('/', upload.single('image'), articlesController.createarticle);
+articleRouter.post('/:userid', upload.single('image'), articlesController.createarticle);
 
 
 articleRouter.get('/', articlesController.getallarticles);

@@ -47,7 +47,7 @@ class articlesController {
         },
       });
       if (imageToDelete) {
-        articleController;
+  
         const imagePath = path.join("./upload", imageToDelete);
         fs.unlinkSync(imagePath);
       }

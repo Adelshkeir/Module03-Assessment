@@ -24,6 +24,6 @@ app.use('/user', userRouter);
 
 
 
-app.listen(4001,()=>{
+app.listen(4002,()=>{
     console.log("connected succefully")
 })
