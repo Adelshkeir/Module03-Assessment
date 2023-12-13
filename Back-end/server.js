@@ -12,7 +12,13 @@ app.use(express.json());
 
 app.use("/upload", express.static('upload'))
 
-
+app.use(
+    cors({
+      origin: "*", // Replace with your frontend's URL
+      methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+      credentials: true,
+    })
+  );
 
 
 
