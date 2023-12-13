@@ -12,6 +12,10 @@ const User = sequelize.define('User', {
     allowNull: false,
     unique: true,
   },
+  userType: {
+    type: DataTypes.ENUM('normaluser', 'admin'),
+    allowNull: false,
+  },
 });
 
 User.sync();
