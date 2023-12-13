@@ -1,0 +1,63 @@
+.homepageimage{
+
+    height: 100vh;
+    width: 100vw;
+}
+
+.mainhomepage{
+    background-color: #d9d9d9;
+}
+
+
+.articlecardscontainer{
+width: 650px;
+height: 300px;
+background-color: #ffffff;
+display: flex;
+flex-direction: row;
+gap: 1px;
+}
+
+.articleimage{
+    width: 50%;
+}
+
+.articlecardimage{
+    width: 100%;
+    height: 100%;
+}
+
+.articlecardfirstpart{
+    width: 50%;
+    height: 100%;
+}
+
+.articlecardsecondpart{
+    margin-top: 0;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ 
+}
+
+
+.homepagecardscontainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    width: 80%;
+    margin: auto;
+}
+
+
+.article-search{
+width: 200px;
+height: 20px;
+margin-left: 40%;
+}
+
+
+.articlecardsecondpart button{
+background-color: orange;
+margin-top: 90px;
+}
